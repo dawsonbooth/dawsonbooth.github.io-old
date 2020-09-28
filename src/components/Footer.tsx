@@ -19,7 +19,7 @@ const IconNavLink: React.FC<LinkProps> = (props) => (
 
 const Copyright = () => (
   <Flex flex={1} justifyContent="center">
-    <Text p={2} mr="auto">
+    <Text mr="auto">
       &#169; Copyright 2020 Dawson Booth
     </Text>
   </Flex>
@@ -67,7 +67,7 @@ const MadeWith = () => (
 );
 
 export default () => (
-  <Flex as="footer" justifyContent="center" py={2} color="background" bg="text">
+  <Flex as="footer" justifyContent="center" py={2} px={2} color="background" bg="text">
     <Flex
       justifyContent="space-between"
       alignItems="center"

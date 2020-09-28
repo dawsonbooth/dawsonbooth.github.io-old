@@ -19,9 +19,8 @@ const PaletteButton = () => {
     <Link
       variant="nav"
       onClick={cycleMode}
-      width={32}
-      height={32}
-      p={1}
+      width={40}
+      height={40}
       sx={{
         cursor: "pointer",
       }}
