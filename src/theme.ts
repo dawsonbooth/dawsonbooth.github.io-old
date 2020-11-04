@@ -73,14 +73,7 @@ export const colors = {
   },
 };
 
-export const variants = {
-  nav: {
-    margin: 5
-  },
-};
-
 export default {
   initialColorModeName,
   colors,
-  variants,
 };
