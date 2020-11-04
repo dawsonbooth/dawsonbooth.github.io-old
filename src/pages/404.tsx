@@ -1,7 +1,7 @@
 import * as React from "react";
 import Layout from "../components/Layout";
 
-import { Heading, Text } from "rebass";
+import { Heading, Text } from "theme-ui";
 
 const NotFoundPage = () => (
   <Layout>

@@ -1,8 +1,8 @@
 import * as React from "react";
-import { Box, Flex } from "rebass";
-import { useColorMode } from "theme-ui";
+import { Box, Flex, useColorMode } from "theme-ui";
 
-import Link from "./Link";
+import NavLink from "./NavLink";
+
 import { PaletteIcon } from "./icons";
 
 import { colors, initialColorModeName } from "../theme";
@@ -18,27 +18,26 @@ const PaletteButton = () => {
   };
 
   return (
-    <Link variant="nav" onClick={cycleColorMode} width={40} height={40}>
+    <NavLink
+      onClick={cycleColorMode}
+      sx={{ width: 40, height: 40, cursor: "pointer" }}
+    >
       <PaletteIcon />
-    </Link>
+    </NavLink>
   );
 };
 
 const Navigation = () => (
   <Box>
-    <Link variant="nav" to="/">
-      Home
-    </Link>
-    <Link variant="nav" to="/page-2/">
-      Page 2
-    </Link>
+    <NavLink to="/">Home</NavLink>
+    <NavLink to="/page-2/">Page 2</NavLink>
   </Box>
 );
 
 const Header = () => {
   return (
-    <Box as="header" width="100%" p={2} color="background" bg="text">
-      <Flex justifyContent="space-between" alignItems="center">
+    <Box as="header" p={2} color="background" bg="text" sx={{ width: "100%" }}>
+      <Flex sx={{ justifyContent: "space-between", alignItems: "center" }}>
         <Navigation />
         <PaletteButton />
       </Flex>

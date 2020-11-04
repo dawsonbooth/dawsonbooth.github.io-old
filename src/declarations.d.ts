@@ -1,1 +1,1 @@
-declare module "@rebass/preset";
+declare module "@theme-ui/presets";

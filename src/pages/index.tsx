@@ -1,10 +1,9 @@
 import * as React from "react";
 
-import { graphql } from "gatsby";
+import { Link, graphql } from "gatsby";
 
-import { Heading, Text } from "rebass";
+import { Heading, Text } from "theme-ui";
 
-import Link from "../components/Link";
 import Layout from "../components/Layout";
 
 // Please note that you can use https://github.com/dotansimha/graphql-code-generator

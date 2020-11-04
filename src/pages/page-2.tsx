@@ -1,8 +1,9 @@
 import * as React from "react";
 
-import { Heading, Text } from "rebass";
+import { Link } from "gatsby";
 
-import Link from "../components/Link";
+import { Heading, Text } from "theme-ui";
+
 import Layout from "../components/Layout";
 
 const SecondPage = () => (

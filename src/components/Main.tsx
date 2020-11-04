@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Flex } from "rebass";
+import { Flex } from "theme-ui";
 
 interface MainProps {
   children: React.ReactNode;
@@ -8,9 +8,11 @@ interface MainProps {
 export default ({ children }: MainProps) => (
   <Flex
     as="main"
-    flexDirection="column"
-    justifyContent="center"
-    alignItems="center"
+    sx={{
+      flexDirection: "column",
+      justifyContent: "center",
+      alignItems: "center",
+    }}
   >
     {children}
   </Flex>

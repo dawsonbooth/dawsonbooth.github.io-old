@@ -1,4 +1,4 @@
-import preset from "@rebass/preset";
+import { bootstrap as preset } from "@theme-ui/presets";
 import { merge } from "theme-ui";
 import theme from "../theme";
 

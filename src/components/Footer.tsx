@@ -1,5 +1,6 @@
 import * as React from "react";
-import { Box, Flex } from "rebass";
+import { Box, Flex, NavLinkProps } from "theme-ui";
+import NavLink from "./NavLink";
 import {
   ExpoIcon,
   GitHubIcon,
@@ -11,15 +12,15 @@ import {
   MailIcon,
 } from "./icons";
 
-import Link, { LinkProps } from "./Link";
-
-const IconNavLink: React.FC<LinkProps> = (props) => (
-  <Link variant="nav" {...props} width={40} height={40} />
+const IconNavLink: React.FC<NavLinkProps> = (props) => (
+  <NavLink {...props} sx={{ width: 40, height: 40 }} />
 );
 
 const Footer = () => (
-  <Box as="footer" width="100%" p={2} color="background" bg="text">
-    <Flex justifyContent="center" alignItems="center" flexWrap="wrap">
+  <Box as="footer" p={2} color="background" bg="text" sx={{ width: "100%" }}>
+    <Flex
+      sx={{ justifyContent: "center", alignItems: "center", flexWrap: "wrap" }}
+    >
       <IconNavLink href="https://www.linkedin.com/in/dawsonbooth/">
         <LinkedInIcon />
       </IconNavLink>
