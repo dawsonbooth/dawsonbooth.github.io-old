@@ -17,7 +17,7 @@ interface IndexPageProps {
   };
 }
 
-export default function ({ data }: IndexPageProps) {
+const HomePage = ({ data }: IndexPageProps) => {
   return (
     <Layout>
       <Heading>Hello world!</Heading>
@@ -27,7 +27,7 @@ export default function ({ data }: IndexPageProps) {
       <Link to="/page-2/">Go to page 2</Link>
     </Layout>
   );
-}
+};
 
 export const pageQuery = graphql`
   query IndexQuery {
@@ -38,3 +38,5 @@ export const pageQuery = graphql`
     }
   }
 `;
+
+export default HomePage;
