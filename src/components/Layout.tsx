@@ -12,7 +12,13 @@ interface LayoutProps {
 
 export default function Layout({ children }: LayoutProps) {
   return (
-    <Flex sx={{ flexDirection: "column" }}>
+    <Flex
+      sx={{
+        flexDirection: "column",
+        justifyContent: "space-between",
+        minHeight: "100vh",
+      }}
+    >
       <Header />
       <Main>{children}</Main>
       <Footer />
