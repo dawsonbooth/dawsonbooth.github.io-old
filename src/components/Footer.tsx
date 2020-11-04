@@ -19,22 +19,20 @@ const IconNavLink: React.FC<LinkProps> = (props) => (
 
 const Copyright = () => (
   <Flex flex={1} justifyContent="center">
-    <Text mr="auto">
-      &#169; Copyright 2020 Dawson Booth
-    </Text>
+    <Text mr="auto">&#169; Copyright 2020 Dawson Booth</Text>
   </Flex>
 );
 
 const Social = () => (
   <Flex flex={1} justifyContent="center">
-    <IconNavLink href="https://expo.io/@dawsonbooth">
-      <ExpoIcon />
+    <IconNavLink href="https://www.linkedin.com/in/dawsonbooth/">
+      <LinkedInIcon />
     </IconNavLink>
     <IconNavLink href="https://github.com/dawsonbooth/">
       <GitHubIcon />
     </IconNavLink>
-    <IconNavLink href="https://www.linkedin.com/in/dawsonbooth/">
-      <LinkedInIcon />
+    <IconNavLink href="https://expo.io/@dawsonbooth">
+      <ExpoIcon />
     </IconNavLink>
     <IconNavLink href="https://www.facebook.com/dawsonbooth/">
       <FacebookIcon />
@@ -67,7 +65,14 @@ const MadeWith = () => (
 );
 
 export default () => (
-  <Flex as="footer" justifyContent="center" py={2} px={2} color="background" bg="text">
+  <Flex
+    as="footer"
+    justifyContent="center"
+    py={2}
+    px={2}
+    color="background"
+    bg="text"
+  >
     <Flex
       justifyContent="space-between"
       alignItems="center"
