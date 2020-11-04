@@ -1,5 +1,7 @@
 import * as React from "react";
 
+import { graphql } from "gatsby";
+
 import { Heading, Text } from "rebass";
 
 import Link from "../components/Link";
