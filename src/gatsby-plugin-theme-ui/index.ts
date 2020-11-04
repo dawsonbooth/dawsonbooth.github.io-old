@@ -1,4 +1,4 @@
-import preset from "@rebass/preset"; // FIXME
+import preset from "@rebass/preset";
 import { merge } from "theme-ui";
 
 export default merge(preset, {
