@@ -6,7 +6,7 @@ import { Heading, Text } from "rebass";
 const NotFoundPage = () => (
   <Layout>
     <Heading>NOT FOUND</Heading>
-    <Text>You just hit a route that doesn&#39;t exist... the sadness.</Text>
+    <Text>You just hit a route that doesn't exist... the sadness.</Text>
   </Layout>
 );
 
