@@ -5,7 +5,9 @@ import { useColorMode } from "theme-ui";
 import Link from "./Link";
 import { PaletteIcon } from "./icons";
 
-const colorModes = ["lite", "dark", "atlassian", "eva", "gray", "hack", "pink"];
+import { colors, initialColorModeName } from "../theme";
+
+const colorModes = [initialColorModeName, ...Object.keys(colors.modes)];
 
 const PaletteButton = () => {
   const [colorMode, setColorMode] = useColorMode();
