@@ -1,54 +1,25 @@
 import * as React from "react";
 
-import { Link, graphql, useStaticQuery } from "gatsby";
-import { Heading, Text } from "theme-ui";
+import { Link } from "gatsby";
+import { Flex, Heading } from "theme-ui";
 
 import Layout from "../components/Layout";
+import RepoCard from "../components/RepoCard";
 
 import routes from "../routes";
-
-const useRepositories = () => {
-  const {
-    githubData: {
-      data: {
-        user: { repositories },
-      },
-    },
-  } = useStaticQuery(
-    graphql`
-      {
-        githubData {
-          data {
-            user {
-              repositories {
-                edges {
-                  node {
-                    name
-                    description
-                    stargazers {
-                      totalCount
-                    }
-                    url
-                    forkCount
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    `
-  );
-
-  return repositories;
-};
+import useRepos from "../hooks/repos";
 
 const Projects = () => {
-  const repositories = useRepositories();
+  const repos = useRepos(12);
+
   return (
     <Layout>
-      <Heading>Personal Projects</Heading>
-      <Text>{JSON.stringify(repositories)}</Text>
+      <Heading as="h1">Personal Projects</Heading>
+      <Flex sx={{ justifyContent: "center", flexWrap: "wrap" }}>
+        {repos.map((repo) => (
+          <RepoCard {...repo} />
+        ))}
+      </Flex>
       <Link to={routes.HOME}>Go back to the home page</Link>
     </Layout>
   );
