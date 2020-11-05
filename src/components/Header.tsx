@@ -1,11 +1,12 @@
 import * as React from "react";
+
 import { Box, Flex, useColorMode } from "theme-ui";
 
-import NavLink from "./NavLink";
-
+import NavLink, { IconNavLink } from "./NavLink";
 import { PaletteIcon } from "./icons";
 
 import { colors, initialColorModeName } from "../theme";
+import routes from "../routes";
 
 const colorModes = [initialColorModeName, ...Object.keys(colors.modes)];
 
@@ -18,19 +19,16 @@ const PaletteButton = () => {
   };
 
   return (
-    <NavLink
-      onClick={cycleColorMode}
-      sx={{ width: 40, height: 40, cursor: "pointer" }}
-    >
+    <IconNavLink onClick={cycleColorMode} sx={{ cursor: "pointer" }}>
       <PaletteIcon />
-    </NavLink>
+    </IconNavLink>
   );
 };
 
 const Navigation = () => (
   <Box>
-    <NavLink to="/">Home</NavLink>
-    <NavLink to="/page-2/">Page 2</NavLink>
+    <NavLink to={routes.HOME}>Home</NavLink>
+    <NavLink to={routes.PROJECTS}>Projects</NavLink>
   </Box>
 );
 

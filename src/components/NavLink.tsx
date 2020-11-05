@@ -4,10 +4,10 @@ import { NavLink, NavLinkProps as ThemeUILinkProps } from "theme-ui";
 import GatsbyLink, { GatsbyLinkProps } from "gatsby-link";
 
 type Optional<T, K extends keyof T> = Omit<T, K> & Partial<T>;
-export type LinkProps = ThemeUILinkProps &
+export type NavLinkProps = ThemeUILinkProps &
   Optional<GatsbyLinkProps<object>, "to">;
 
-export default (props: LinkProps) => {
+export default (props: NavLinkProps) => {
   if (props.hasOwnProperty("to"))
     return <NavLink as={GatsbyLink} p={1} {...props} />;
   return (
@@ -20,3 +20,7 @@ export default (props: LinkProps) => {
     />
   );
 };
+
+export const IconNavLink: React.FC<NavLinkProps> = (props) => (
+  <NavLink p={1} {...props} sx={{ width: 32, height: 32, ...props.sx }} />
+);

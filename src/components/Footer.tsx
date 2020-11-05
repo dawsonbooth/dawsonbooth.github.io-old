@@ -1,6 +1,8 @@
 import * as React from "react";
-import { Box, Flex, NavLinkProps } from "theme-ui";
-import NavLink from "./NavLink";
+
+import { Box, Flex } from "theme-ui";
+
+import { IconNavLink } from "./NavLink";
 import {
   ExpoIcon,
   GitHubIcon,
@@ -11,10 +13,6 @@ import {
   SpotifyIcon,
   MailIcon,
 } from "./icons";
-
-const IconNavLink: React.FC<NavLinkProps> = (props) => (
-  <NavLink {...props} sx={{ width: 40, height: 40 }} />
-);
 
 const Footer = () => (
   <Box as="footer" p={2} color="background" bg="text" sx={{ width: "100%" }}>
