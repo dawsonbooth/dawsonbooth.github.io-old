@@ -16,6 +16,7 @@ export default function Layout({ children }: LayoutProps) {
       sx={{
         flexDirection: "column",
         justifyContent: "space-between",
+        alignItems: "center",
         minHeight: "100vh",
       }}
     >

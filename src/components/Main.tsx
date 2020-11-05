@@ -12,6 +12,8 @@ export default ({ children }: MainProps) => (
       flexDirection: "column",
       justifyContent: "center",
       alignItems: "center",
+      py: 10,
+      maxWidth: 800,
     }}
   >
     {children}
