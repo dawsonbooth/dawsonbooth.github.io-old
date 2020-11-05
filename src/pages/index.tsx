@@ -1,14 +1,13 @@
 import * as React from "react";
 
 import { Link, graphql } from "gatsby";
-
 import { Heading, Text } from "theme-ui";
 
 import Layout from "../components/Layout";
 
-// Please note that you can use https://github.com/dotansimha/graphql-code-generator
-// to generate all types from graphQL schema
-interface IndexPageProps {
+import routes from "../routes";
+
+interface HomeProps {
   data: {
     site: {
       siteMetadata: {
@@ -18,20 +17,20 @@ interface IndexPageProps {
   };
 }
 
-const HomePage = ({ data }: IndexPageProps) => {
+const Home = ({ data }: HomeProps) => {
   return (
     <Layout>
       <Heading>Hello world!</Heading>
       <Text>
         Welcome to my new <strong>{data.site.siteMetadata.title}</strong>.
       </Text>
-      <Link to="/page-2/">Go to page 2</Link>
+      <Link to={routes.PROJECTS}>Go to Projects</Link>
     </Layout>
   );
 };
 
 export const pageQuery = graphql`
-  query IndexQuery {
+  query HomeQuery {
     site {
       siteMetadata {
         title
@@ -40,4 +39,4 @@ export const pageQuery = graphql`
   }
 `;
 
-export default HomePage;
+export default Home;

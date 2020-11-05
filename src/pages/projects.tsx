@@ -1,10 +1,11 @@
 import * as React from "react";
 
 import { Link, graphql, useStaticQuery } from "gatsby";
-
 import { Heading, Text } from "theme-ui";
 
 import Layout from "../components/Layout";
+
+import routes from "../routes";
 
 const useRepositories = () => {
   const {
@@ -48,7 +49,7 @@ const Projects = () => {
     <Layout>
       <Heading>Personal Projects</Heading>
       <Text>{JSON.stringify(repositories)}</Text>
-      <Link to="/">Go back to the home page</Link>
+      <Link to={routes.HOME}>Go back to the home page</Link>
     </Layout>
   );
 };
