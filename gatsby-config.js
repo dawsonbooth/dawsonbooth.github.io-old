@@ -13,9 +13,10 @@ module.exports = {
       resolve: `gatsby-source-github-api`,
       options: {
         token: process.env.GATSBY_GITHUB_API_TOKEN,
-        graphQLQuery: `query ($author: String = "", $userFirst: Int = 0) {
+        graphQLQuery: `
+        query ($author: String!, $userFirst: Int!) {
           user(login: $author) {
-            repositories(first: $userFirst, orderBy: {field: STARGAZERS, direction: DESC} privacy: PUBLIC, isFork: false) {
+            repositories(first: $userFirst, privacy: PUBLIC, isFork: false) {
               edges {
                 node {
                   name
@@ -29,7 +30,8 @@ module.exports = {
               }
             }
           }
-        }`,
+        }
+        `,
         variables: {
           userFirst: 100,
           author: "dawsonbooth",
