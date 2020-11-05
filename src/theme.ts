@@ -1,79 +1,52 @@
-export const initialColorModeName = "lite";
+import { dark as preset } from "@theme-ui/presets";
+import { merge } from "theme-ui";
 
-export const colors = {
-  text: "#000",
-  background: "#fff",
-  primary: "#33e",
-  secondary: "#a0c",
-  accent: "#f0a",
-  muted: "#f6f6ff",
-  gray: "#444",
-  lightgray: "#cfcfd3",
-  modes: {
-    dark: {
-      text: "#fff",
-      background: "#000",
-      primary: "#0ff",
-      secondary: "#b0f",
-      accent: "#f0b",
-      muted: "#111",
-      gray: "#999",
-      lightgray: "#444",
-    },
-    atlassian: {
-      text: "#172B4D",
-      background: "#FFFFFF",
-      primary: "#0052CC",
-      secondary: "#00B8D9",
-      accent: "#6554C0",
-      muted: "#091E42",
-      gray: "#5E6C84",
-      lightgray: "#B3BAC5",
-    },
-    eva: {
-      text: "#FFFFFF",
-      background: "#222B45",
-      primary: "#3366FF",
-      secondary: "#37A0FC",
-      accent: "#6CD824",
-      muted: "#091A7A",
-      gray: "#CDD6E3",
-      lightgray: "#EDF1F7",
-    },
-    gray: {
-      text: "#fff",
-      background: "hsl(270, 30%, 14%)",
-      primary: "hsl(180, 100%, 60%)",
-      secondary: "hsl(270, 100%, 60%)",
-      accent: "hsl(300, 100%, 60%)",
-      muted: "hsl(270, 50%, 8%)",
-      gray: "hsl(270, 50%, 70%)",
-      lightgray: "hsl(270, 50%, 30%)",
-    },
-    hack: {
-      text: "hsl(120, 100%, 75%)",
-      background: "hsl(120, 20%, 10%)",
-      primary: "hsl(120, 100%, 40%)",
-      secondary: "hsl(120, 50%, 40%)",
-      accent: "hsl(120, 100%, 90%)",
-      muted: "hsl(120, 20%, 7%)",
-      gray: "hsl(120, 20%, 40%)",
-      lightgray: "hsl(120, 20%, 20%)",
-    },
-    pink: {
-      text: "hsl(350, 80%, 10%)",
-      background: "hsl(350, 100%, 90%)",
-      primary: "hsl(350, 100%, 50%)",
-      secondary: "hsl(280, 100%, 50%)",
-      accent: "hsl(280, 100%, 20%)",
-      muted: "hsl(350, 100%, 88%)",
-      gray: "hsl(350, 40%, 50%)",
-      lightgray: "hsl(350, 60%, 80%)",
+export default merge(
+  {
+    initialColorModeName: "dark",
+    colors: {
+      text: "#ffffff",
+      background: "#060606",
+      primary: "#33ccff",
+      secondary: "#ee00ff",
+      muted: "#191919",
+      highlight: "#29112c",
+      gray: "#999999",
+      accent: "#cc00ff",
+      modes: {
+        light: {
+          text: "#000000",
+          background: "#ffffff",
+          primary: "#3333ee",
+          secondary: "#111199",
+          muted: "#f6f6f6",
+          highlight: "#efeffe", // '#ffffcc',
+          gray: "#777777",
+          accent: "#660099",
+          darken: "rgba(0, 0, 0, .25)",
+        },
+        deep: {
+          text: "hsl(210, 50%, 96%)",
+          background: "hsl(230, 25%, 18%)",
+          primary: "hsl(260, 100%, 80%)",
+          secondary: "hsl(290, 100%, 80%)",
+          highlight: "hsl(260, 20%, 40%)",
+          accent: "hsl(290, 100%, 80%)",
+          muted: "hsla(230, 20%, 0%, 20%)",
+          gray: "hsl(210, 50%, 60%)",
+        },
+        swiss: {
+          text: "hsl(10, 20%, 20%)",
+          background: "hsl(10, 10%, 98%)",
+          primary: "hsl(10, 80%, 50%)",
+          secondary: "hsl(10, 60%, 50%)",
+          highlight: "hsl(10, 40%, 90%)",
+          accent: "hsl(250, 60%, 30%)",
+          muted: "hsl(10, 20%, 94%)",
+          gray: "hsl(10, 20%, 50%)",
+        },
+      },
     },
   },
-};
-
-export default {
-  initialColorModeName,
-  colors,
-};
+  preset
+);

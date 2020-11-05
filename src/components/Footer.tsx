@@ -15,7 +15,7 @@ import {
 } from "./icons";
 
 const Footer = () => (
-  <Box as="footer" p={2} color="background" bg="text" sx={{ width: "100%" }}>
+  <Box as="footer" p={2} sx={{ width: "100%" }}>
     <Flex
       sx={{ justifyContent: "center", alignItems: "center", flexWrap: "wrap" }}
     >

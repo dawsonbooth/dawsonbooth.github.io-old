@@ -5,10 +5,13 @@ import { Box, Flex, useColorMode } from "theme-ui";
 import NavLink, { IconNavLink } from "./NavLink";
 import { PaletteIcon } from "./icons";
 
-import { colors, initialColorModeName } from "../theme";
+import theme from "../theme";
 import routes from "../routes";
 
-const colorModes = [initialColorModeName, ...Object.keys(colors.modes)];
+const colorModes = [
+  theme.initialColorModeName,
+  ...Object.keys(theme.colors.modes),
+];
 
 const PaletteButton = () => {
   const [colorMode, setColorMode] = useColorMode();
@@ -26,15 +29,15 @@ const PaletteButton = () => {
 };
 
 const Navigation = () => (
-  <Box>
+  <Flex sx={{ flexWrap: "nowrap" }}>
     <NavLink to={routes.HOME}>Home</NavLink>
     <NavLink to={routes.PROJECTS}>Projects</NavLink>
-  </Box>
+  </Flex>
 );
 
 const Header = () => {
   return (
-    <Box as="header" p={2} color="background" bg="text" sx={{ width: "100%" }}>
+    <Box as="header" p={2} sx={{ width: "100%" }}>
       <Flex sx={{ justifyContent: "space-between", alignItems: "center" }}>
         <Navigation />
         <PaletteButton />
