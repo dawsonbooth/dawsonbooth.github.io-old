@@ -2,7 +2,7 @@ import * as React from "react";
 
 import { Box, Flex } from "theme-ui";
 
-import { IconNavLink } from "../NavLink";
+import { IconNavLink } from "../Link";
 import {
   ExpoIcon,
   GitHubIcon,

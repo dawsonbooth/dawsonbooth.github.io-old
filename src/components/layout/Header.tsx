@@ -2,7 +2,7 @@ import * as React from "react";
 
 import { Flex, useColorMode } from "theme-ui";
 
-import NavLink, { IconNavLink } from "../NavLink";
+import { NavLink, IconNavLink } from "../Link";
 import { PaletteIcon } from "../icons";
 
 import theme from "../../theme";
