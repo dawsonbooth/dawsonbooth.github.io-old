@@ -20,8 +20,8 @@ const Projects = () => {
     <Layout>
       <Heading as="h1">Personal Projects</Heading>
       <Flex sx={{ justifyContent: "center", flexWrap: "wrap" }}>
-        {repos.map((repo) => (
-          <RepoCard {...repo} />
+        {repos.map((repo, i) => (
+          <RepoCard key={i} {...repo} />
         ))}
       </Flex>
       <Link href="https://github.com/dawsonbooth">
