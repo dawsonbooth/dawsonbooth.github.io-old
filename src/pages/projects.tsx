@@ -3,7 +3,7 @@ import * as React from "react";
 import { Link } from "gatsby";
 import { Flex, Heading } from "theme-ui";
 
-import Layout from "../components/Layout";
+import Layout from "../components/layout";
 import RepoCard from "../components/RepoCard";
 
 import routes from "../routes";

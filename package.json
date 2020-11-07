@@ -14,6 +14,7 @@
     "deploy": "gatsby build --prefix-paths && gh-pages -d public"
   },
   "dependencies": {
+    "@primer/octicons-react": "^11.0.0",
     "@theme-ui/preset-funk": "^0.3.0",
     "@theme-ui/presets": "^0.3.0",
     "gatsby": "^2.24.58",

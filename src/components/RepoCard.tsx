@@ -1,6 +1,9 @@
 import * as React from "react";
 
-import { Card, Text } from "theme-ui";
+import { Heading, Card, Flex, Text, Grid } from "theme-ui";
+
+import { StarFillIcon, GitForkIcon } from "./icons";
+import Link from "./Link";
 
 interface RepoCardProps {
   name: string;
@@ -11,16 +14,27 @@ interface RepoCardProps {
 }
 
 export default ({ name, description, stars, forks, url }: RepoCardProps) => (
-  <Card
-    sx={{
-      width: 300,
-      height: 150,
-    }}
-  >
-    <Text>{name}</Text>
-    <Text>
-      Stars: {stars} - Forks: {forks}
-    </Text>
-    <Text>{description}</Text>
-  </Card>
+  <Link href={url} sx={{ color: "text", textDecoration: "none" }}>
+    <Card
+      p={3}
+      sx={{
+        margin: 2,
+        width: 350,
+        height: 170,
+      }}
+    >
+      <Grid gap={2}>
+        <Heading as="h4">{name}</Heading>
+        <Flex>
+          <Card px={1} sx={{ marginRight: 1 }}>
+            <StarFillIcon /> {stars}
+          </Card>
+          <Card px={1}>
+            <GitForkIcon /> {forks}
+          </Card>
+        </Flex>
+        <Text>{description}</Text>
+      </Grid>
+    </Card>
+  </Link>
 );
