@@ -6,11 +6,15 @@ import Layout from "../components/layout";
 import Link from "../components/Link";
 import RepoCard from "../components/RepoCard";
 
-import routes from "../routes";
 import useRepos from "../hooks/repos";
 
 const Projects = () => {
-  const repos = useRepos(12);
+  const allRepos = useRepos();
+  const numRepos = allRepos.length;
+  const repos = allRepos
+    .filter((repo) => Boolean(repo.description))
+    .sort((r1, r2) => r2.stars + r2.forks - (r1.stars + r1.forks))
+    .slice(0, 12);
 
   return (
     <Layout>
@@ -20,7 +24,9 @@ const Projects = () => {
           <RepoCard {...repo} />
         ))}
       </Flex>
-      <Link to={routes.HOME}>Go back to the home page</Link>
+      <Link href="https://github.com/dawsonbooth">
+        Check out all {numRepos} repositories at my GitHub!
+      </Link>
     </Layout>
   );
 };

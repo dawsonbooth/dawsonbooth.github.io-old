@@ -22,7 +22,7 @@ interface RepoQueryResult {
   };
 }
 
-export default (count?: number) => {
+export default () => {
   const result: RepoQueryResult = useStaticQuery(
     graphql`
       {
@@ -49,19 +49,15 @@ export default (count?: number) => {
     `
   );
 
-  const repos = result.githubData.data.user.repositories.edges
-    .map((edge) => {
-      return {
-        name: edge.node.name,
-        description: edge.node.description,
-        stars: edge.node.stargazers.totalCount,
-        forks: edge.node.forkCount,
-        url: edge.node.url,
-      };
-    })
-    .filter((repo) => Boolean(repo.description))
-    .sort((r1, r2) => r2.stars + r2.forks - (r1.stars + r1.forks))
-    .slice(0, count);
+  const repos = result.githubData.data.user.repositories.edges.map((edge) => {
+    return {
+      name: edge.node.name,
+      description: edge.node.description,
+      stars: edge.node.stargazers.totalCount,
+      forks: edge.node.forkCount,
+      url: edge.node.url,
+    };
+  });
 
   return repos;
 };
