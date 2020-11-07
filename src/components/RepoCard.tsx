@@ -3,7 +3,7 @@ import * as React from "react";
 import { Heading, Card, Flex, Text, Grid } from "theme-ui";
 
 import { StarFillIcon, GitForkIcon } from "./icons";
-import Link from "./Link";
+import NavLink from "./NavLink";
 
 interface RepoCardProps {
   name: string;
@@ -14,7 +14,7 @@ interface RepoCardProps {
 }
 
 export default ({ name, description, stars, forks, url }: RepoCardProps) => (
-  <Link href={url} sx={{ color: "text", textDecoration: "none" }}>
+  <NavLink href={url}>
     <Card
       p={3}
       sx={{
@@ -36,5 +36,5 @@ export default ({ name, description, stars, forks, url }: RepoCardProps) => (
         <Text>{description}</Text>
       </Grid>
     </Card>
-  </Link>
+  </NavLink>
 );

@@ -9,12 +9,5 @@ export type LinkProps = ThemeUILinkProps &
 
 export default (props: LinkProps) => {
   if (props.hasOwnProperty("to")) return <Link as={GatsbyLink} {...props} />;
-  return (
-    <Link
-      sx={{
-        cursor: "pointer",
-      }}
-      {...props}
-    />
-  );
+  return <Link {...props} />;
 };

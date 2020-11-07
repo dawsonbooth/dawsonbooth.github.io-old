@@ -1,9 +1,11 @@
 import * as React from "react";
 
-import { Link, graphql } from "gatsby";
+import { graphql } from "gatsby";
+
 import { Heading, Text } from "theme-ui";
 
 import Layout from "../components/layout";
+import Link from "../components/Link";
 
 import routes from "../routes";
 
