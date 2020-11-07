@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { Box, Flex, useColorMode } from "theme-ui";
+import { Flex, useColorMode } from "theme-ui";
 
 import NavLink, { IconNavLink } from "../NavLink";
 import { PaletteIcon } from "../icons";
@@ -37,12 +37,19 @@ const Navigation = () => (
 
 const Header: React.FC = () => {
   return (
-    <Box as="header" p={2} sx={{ width: "100%" }}>
-      <Flex sx={{ justifyContent: "space-between", alignItems: "center" }}>
+    <Flex as="header" p={2} sx={{ justifyContent: "center", width: "100%" }}>
+      <Flex
+        sx={{
+          justifyContent: "space-between",
+          alignItems: "center",
+          width: "100%",
+          maxWidth: 800,
+        }}
+      >
         <Navigation />
         <PaletteButton />
       </Flex>
-    </Box>
+    </Flex>
   );
 };
 
