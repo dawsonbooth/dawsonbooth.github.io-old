@@ -2,7 +2,7 @@ import * as React from "react";
 
 import { Box, Flex } from "theme-ui";
 
-import { IconNavLink } from "./NavLink";
+import { IconNavLink } from "../NavLink";
 import {
   ExpoIcon,
   GitHubIcon,
@@ -12,9 +12,9 @@ import {
   InstagramIcon,
   SpotifyIcon,
   MailIcon,
-} from "./icons";
+} from "../icons";
 
-const Footer = () => (
+const Footer: React.FC = () => (
   <Box as="footer" p={2} sx={{ width: "100%" }}>
     <Flex
       sx={{ justifyContent: "center", alignItems: "center", flexWrap: "wrap" }}

@@ -5,7 +5,7 @@ interface MainProps {
   children: React.ReactNode;
 }
 
-export default ({ children }: MainProps) => (
+const Main: React.FC<MainProps> = ({ children }) => (
   <Flex
     as="main"
     sx={{
@@ -19,3 +19,5 @@ export default ({ children }: MainProps) => (
     {children}
   </Flex>
 );
+
+export default Main;

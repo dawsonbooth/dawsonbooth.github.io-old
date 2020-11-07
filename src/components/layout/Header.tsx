@@ -2,11 +2,11 @@ import * as React from "react";
 
 import { Box, Flex, useColorMode } from "theme-ui";
 
-import NavLink, { IconNavLink } from "./NavLink";
-import { PaletteIcon } from "./icons";
+import NavLink, { IconNavLink } from "../NavLink";
+import { PaletteIcon } from "../icons";
 
-import theme from "../theme";
-import routes from "../routes";
+import theme from "../../theme";
+import routes from "../../routes";
 
 const colorModes = [
   theme.initialColorModeName,
@@ -35,7 +35,7 @@ const Navigation = () => (
   </Flex>
 );
 
-const Header = () => {
+const Header: React.FC = () => {
   return (
     <Box as="header" p={2} sx={{ width: "100%" }}>
       <Flex sx={{ justifyContent: "space-between", alignItems: "center" }}>
