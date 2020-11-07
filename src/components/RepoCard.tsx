@@ -3,24 +3,31 @@ import * as React from "react";
 import { Heading, Card, Flex, Text, Grid } from "theme-ui";
 
 import { StarFillIcon, GitForkIcon } from "./icons";
-import NavLink from "./NavLink";
+import Link from "./Link";
 
 interface RepoCardProps {
   name: string;
   description: string;
-  stars?: number;
-  forks?: number;
-  url?: string;
+  stars: number;
+  forks: number;
+  url: string;
 }
 
+// TODO: Add watchers
 export default ({ name, description, stars, forks, url }: RepoCardProps) => (
-  <NavLink href={url}>
+  <Link
+    href={url}
+    sx={{
+      color: "inherit",
+      textDecoration: "none",
+    }}
+  >
     <Card
       p={3}
       sx={{
-        margin: 2,
         width: 350,
         height: 170,
+        margin: 2,
       }}
     >
       <Grid gap={2}>
@@ -36,5 +43,5 @@ export default ({ name, description, stars, forks, url }: RepoCardProps) => (
         <Text>{description}</Text>
       </Grid>
     </Card>
-  </NavLink>
+  </Link>
 );
