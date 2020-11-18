@@ -17,7 +17,7 @@ const Projects = () => {
     .slice(0, 12);
 
   return (
-    <Layout>
+    <Layout title="Projects">
       <Heading as="h1">Personal Projects</Heading>
       <Flex sx={{ justifyContent: "center", flexWrap: "wrap" }}>
         {repos.map((repo, i) => (

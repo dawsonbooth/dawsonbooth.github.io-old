@@ -21,7 +21,7 @@ interface HomeProps {
 
 const Home = ({ data }: HomeProps) => {
   return (
-    <Layout>
+    <Layout title="Home">
       <Heading>Hello world!</Heading>
       <Text>
         Welcome to my new <strong>{data.site.siteMetadata.title}</strong>.
