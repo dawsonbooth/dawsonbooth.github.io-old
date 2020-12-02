@@ -17,9 +17,10 @@ const Projects = () => {
     .slice(0, 12);
 
   return (
+    // TODO: Figure out best practice for vertical margin around projects
     <Layout title="Projects">
       <Heading as="h1">Personal Projects</Heading>
-      <Flex sx={{ justifyContent: "center", flexWrap: "wrap" }}>
+      <Flex sx={{ justifyContent: "center", flexWrap: "wrap", marginY: 20 }}>
         {repos.map((repo, i) => (
           <RepoCard key={i} {...repo} />
         ))}
