@@ -17,7 +17,11 @@ export type LinkProps = ThemeUILinkProps &
 export const Link: React.FC<LinkProps> = (props) => {
   if (props.hasOwnProperty("to"))
     return <ThemeUILink as={GatsbyLink} {...props} />;
-  return <ThemeUILink {...props} />;
+  const target =
+    props.hasOwnProperty("href") && props.href.startsWith("http")
+      ? "_blank"
+      : "_self";
+  return <ThemeUILink target={target} {...props} />;
 };
 
 export type NavLinkProps = ThemeUINavLinkProps &
@@ -26,12 +30,17 @@ export type NavLinkProps = ThemeUINavLinkProps &
 export const NavLink: React.FC<NavLinkProps> = (props) => {
   if (props.hasOwnProperty("to"))
     return <ThemeUINavLink as={GatsbyLink} p={1} {...props} />;
+  const target =
+    props.hasOwnProperty("href") && props.href.startsWith("http")
+      ? "_blank"
+      : "_self";
   return (
     <ThemeUINavLink
       p={1}
       sx={{
         cursor: "pointer",
       }}
+      target={target}
       {...props}
     />
   );
