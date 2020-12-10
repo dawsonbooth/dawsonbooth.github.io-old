@@ -13,7 +13,10 @@ const Projects = () => {
   const numRepos = allRepos.length;
   const repos = allRepos
     .filter((repo) => Boolean(repo.description))
-    .sort((r1, r2) => r2.stars + r2.forks - (r1.stars + r1.forks))
+    .sort(
+      (r1, r2) =>
+        r2.stars + r2.forks + r2.watchers - (r1.stars + r1.forks + r1.watchers)
+    )
     .slice(0, 12);
 
   return (

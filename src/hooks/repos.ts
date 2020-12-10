@@ -9,11 +9,12 @@ interface RepoQueryResult {
             node: {
               name: string;
               description: string;
-              stargazers: {
+              stargazerCount: number;
+              forkCount: number;
+              watchers: {
                 totalCount: number;
               };
               url: string;
-              forkCount: number;
             };
           }[];
         };
@@ -34,11 +35,12 @@ export default () => {
                   node {
                     name
                     description
-                    stargazers {
+                    stargazerCount
+                    forkCount
+                    watchers {
                       totalCount
                     }
                     url
-                    forkCount
                   }
                 }
               }
@@ -53,8 +55,9 @@ export default () => {
     return {
       name: edge.node.name,
       description: edge.node.description,
-      stars: edge.node.stargazers.totalCount,
+      stars: edge.node.stargazerCount,
       forks: edge.node.forkCount,
+      watchers: edge.node.watchers.totalCount, // TODO: Consider adding to project card
       url: edge.node.url,
     };
   });

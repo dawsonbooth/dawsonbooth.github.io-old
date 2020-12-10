@@ -22,10 +22,11 @@ module.exports = {
                   name
                   description
                   url
+                  stargazerCount
                   forkCount
-                  stargazers {
+                  watchers {
                     totalCount
-                  }
+                  }  
                 }
               }
             }
