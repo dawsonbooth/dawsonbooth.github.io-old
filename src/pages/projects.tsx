@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { Flex, Heading } from "theme-ui";
+import { Flex, Grid, Heading } from "theme-ui";
 
 import Layout from "../components/layout";
 import Link from "../components/Link";
@@ -20,10 +20,11 @@ const Projects = () => {
     .slice(0, 12);
 
   return (
-    // TODO: Figure out best practice for vertical margin around projects
     <Layout title="Projects">
       <Heading as="h1">Personal Projects</Heading>
-      <Flex sx={{ justifyContent: "center", flexWrap: "wrap", marginY: 20 }}>
+      <Flex
+        sx={{ flexWrap: "wrap", justifyContent: "center", gap: 3, marginY: 20 }}
+      >
         {repos.map((repo, i) => (
           <RepoCard key={i} {...repo} />
         ))}

@@ -27,7 +27,6 @@ export default ({ name, description, stars, forks, url }: RepoCardProps) => (
       sx={{
         width: 350,
         height: 170,
-        margin: 2,
       }}
     >
       <Grid gap={2}>
