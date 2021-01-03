@@ -11,7 +11,7 @@ const Home = () => {
   return (
     <Layout title="Home">
       <Heading as="h1" sx={{ fontSize: 36, textAlign: "center" }}>
-        Hello world! I'm Dawson.
+        Hello, World! I'm Dawson.
       </Heading>
       <Link to={routes.PROJECTS}>Go to Projects</Link>
     </Layout>
