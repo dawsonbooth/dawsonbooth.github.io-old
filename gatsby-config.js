@@ -16,7 +16,7 @@ module.exports = {
         graphQLQuery: `
         query ($author: String!, $userFirst: Int!) {
           user(login: $author) {
-            repositories(first: $userFirst, privacy: PUBLIC, isFork: false) {
+            repositories(first: $userFirst, privacy: PUBLIC, isFork: false, ownerAffiliations: [OWNER]) {
               edges {
                 node {
                   name
@@ -26,7 +26,7 @@ module.exports = {
                   forkCount
                   watchers {
                     totalCount
-                  }  
+                  }
                 }
               }
             }
