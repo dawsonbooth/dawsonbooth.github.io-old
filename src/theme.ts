@@ -11,12 +11,12 @@ export default merge(preset, {
       dark: {
         text: "#C8D1D9",
         background: "#0D1117",
-        primary: "#D2A8FF",
+        primary: "#F9826C",
       },
-      deep: {
-        text: "#F0F5F9",
-        background: "#232639",
-        primary: "#EE9AFF",
+      discord: {
+        text: "#F5F5F5",
+        background: "#2F3136",
+        primary: "#7289DA",
       },
     },
   },
