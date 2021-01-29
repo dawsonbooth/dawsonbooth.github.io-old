@@ -15,7 +15,7 @@ export default merge(preset, {
       },
       discord: {
         text: "#F5F5F5",
-        background: "#2F3136",
+        background: "#202225",
         primary: "#7289DA",
       },
     },
