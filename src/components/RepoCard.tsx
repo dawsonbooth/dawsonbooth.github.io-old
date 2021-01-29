@@ -20,8 +20,7 @@ export default ({ name, description, stars, forks, url }: RepoCardProps) => (
     sx={{
       color: "inherit",
       textDecoration: "none",
-      "&:hover, &:focus, &.active": {
-        color: "primary",
+      "&:hover": {
         textDecoration: "none",
       },
     }}
@@ -31,6 +30,9 @@ export default ({ name, description, stars, forks, url }: RepoCardProps) => (
       sx={{
         width: 350,
         height: 170,
+        "&:hover": {
+          borderColor: "primary",
+        },
       }}
     >
       <Grid gap={2}>
