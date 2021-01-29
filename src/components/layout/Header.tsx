@@ -1,6 +1,7 @@
 import * as React from "react";
 
 import { Flex, useColorMode } from "theme-ui";
+import { lighten } from "@theme-ui/color";
 
 import { NavLink, IconNavLink } from "../Link";
 import { PaletteIcon } from "../icons";
@@ -8,21 +9,20 @@ import { PaletteIcon } from "../icons";
 import theme from "../../theme";
 import routes from "../../routes";
 
-const colorModes = [
-  theme.initialColorModeName,
-  ...Object.keys(theme.colors.modes),
-];
+const modes = [theme.initialColorModeName, ...Object.keys(theme.colors.modes)];
 
 const PaletteButton = () => {
-  const [colorMode, setColorMode] = useColorMode();
-
-  const cycleColorMode = () => {
-    const i = (colorModes.indexOf(colorMode) + 1) % colorModes.length;
-    setColorMode(colorModes[i]);
-  };
+  const [mode, setMode] = useColorMode();
 
   return (
-    <IconNavLink onClick={cycleColorMode} sx={{ cursor: "pointer" }}>
+    <IconNavLink
+      onClick={() => {
+        const index = modes.indexOf(mode);
+        const next = modes[(index + 1) % modes.length];
+        setMode(next);
+      }}
+      sx={{ cursor: "pointer" }}
+    >
       <PaletteIcon />
     </IconNavLink>
   );
@@ -37,7 +37,18 @@ const Navigation = () => (
 
 const Header: React.FC = () => {
   return (
-    <Flex as="header" p={2} sx={{ justifyContent: "center", width: "100%" }}>
+    <Flex
+      as="header"
+      p={2}
+      sx={{
+        position: "sticky",
+        top: 0,
+        justifyContent: "center",
+        width: "100%",
+        backgroundColor: lighten("background", 0.05),
+        boxShadow: "rgba(0, 0, 0, 0.1) 0px 2px 6px",
+      }}
+    >
       <Flex
         sx={{
           justifyContent: "space-between",
