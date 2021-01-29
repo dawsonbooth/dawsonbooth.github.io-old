@@ -9,14 +9,9 @@ export default merge(preset, {
     primary: "#E24F47",
     modes: {
       dark: {
-        text: "#C8D1D9",
-        background: "#0D1117",
+        text: "#E0DFE4",
+        background: "#1D1D1D",
         primary: "#F9826C",
-      },
-      discord: {
-        text: "#F5F5F5",
-        background: "#202225",
-        primary: "#7289DA",
       },
     },
   },
