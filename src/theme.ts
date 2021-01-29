@@ -11,7 +11,7 @@ export default merge(preset, {
       dark: {
         text: "#C8D1D9",
         background: "#0D1117",
-        primary: "#3FB950",
+        primary: "#D2A8FF",
       },
       deep: {
         text: "#F0F5F9",
