@@ -20,6 +20,10 @@ export default ({ name, description, stars, forks, url }: RepoCardProps) => (
     sx={{
       color: "inherit",
       textDecoration: "none",
+      "&:hover, &:focus, &.active": {
+        color: "primary",
+        textDecoration: "none",
+      },
     }}
   >
     <Card
