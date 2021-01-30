@@ -23,7 +23,7 @@ export default function Layout({ title, children }: LayoutProps) {
           flexDirection: "column",
           justifyContent: "space-between",
           alignItems: "center",
-          height: "100vh",
+          minHeight: "100vh",
         }}
       >
         <Header />
