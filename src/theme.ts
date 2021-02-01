@@ -1,5 +1,6 @@
 import { base as preset } from "@theme-ui/presets";
 import { merge } from "theme-ui";
+import { lighten } from "polished";
 
 export default merge(preset, {
   initialColorModeName: "light",
@@ -12,6 +13,7 @@ export default merge(preset, {
         text: "#E0DFE4",
         background: "#1D1D1D",
         primary: "#F9826C",
+        secondary: lighten(0.05, "#1D1D1D"),
       },
     },
   },

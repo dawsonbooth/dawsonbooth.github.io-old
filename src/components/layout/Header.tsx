@@ -1,7 +1,6 @@
 import * as React from "react";
 
 import { Flex, useColorMode } from "theme-ui";
-import { lighten } from "@theme-ui/color";
 
 import { NavLink, IconNavLink } from "../Link";
 import { PaletteIcon } from "../icons";
@@ -45,7 +44,7 @@ const Header: React.FC = () => {
         top: 0,
         justifyContent: "center",
         width: "100%",
-        backgroundColor: lighten("background", 0.05),
+        backgroundColor: "secondary",
         boxShadow: "rgba(0, 0, 0, 0.1) 0px 2px 6px",
       }}
     >

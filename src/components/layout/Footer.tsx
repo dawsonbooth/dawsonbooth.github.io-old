@@ -1,7 +1,6 @@
 import * as React from "react";
 
 import { Box, Flex } from "theme-ui";
-import { lighten } from "@theme-ui/color";
 
 import { IconNavLink } from "../Link";
 import {
@@ -16,11 +15,7 @@ import {
 } from "../icons";
 
 const Footer: React.FC = () => (
-  <Box
-    as="footer"
-    p={2}
-    sx={{ width: "100%", backgroundColor: lighten("background", 0.05) }}
-  >
+  <Box as="footer" p={2} sx={{ width: "100%", backgroundColor: "secondary" }}>
     <Flex
       sx={{ justifyContent: "center", alignItems: "center", flexWrap: "wrap" }}
     >
