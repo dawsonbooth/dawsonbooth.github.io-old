@@ -8,15 +8,16 @@ import Main from "./Main";
 import Footer from "./Footer";
 
 interface LayoutProps {
-  title: string;
+  title?: string;
   children: React.ReactNode;
 }
 
 export default function Layout({ title, children }: LayoutProps) {
+  const prefix = title ? `${title} | ` : "";
   return (
     <>
       <Helmet>
-        <title>{`${title} | Dawson Booth`}</title>
+        <title>{`${prefix}Dawson Booth`}</title>
       </Helmet>
       <Flex
         sx={{

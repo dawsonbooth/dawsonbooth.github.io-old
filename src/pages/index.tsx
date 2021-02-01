@@ -9,7 +9,7 @@ import routes from "../routes";
 
 const Home = () => {
   return (
-    <Layout title="Home">
+    <Layout>
       <Heading as="h1" sx={{ fontSize: 36, textAlign: "center" }}>
         Hello, World! I'm Dawson.
       </Heading>
