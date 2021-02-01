@@ -44,7 +44,7 @@ const Header: React.FC = () => {
         top: 0,
         justifyContent: "center",
         width: "100%",
-        backgroundColor: "secondary",
+        backgroundColor: "muted",
         boxShadow: "rgba(0, 0, 0, 0.1) 0px 2px 6px",
       }}
     >

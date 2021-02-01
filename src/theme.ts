@@ -8,12 +8,13 @@ export default merge(preset, {
     text: "#212121",
     background: "#FFFFFF",
     primary: "#E24F47",
+    muted: "#FFFFFF",
     modes: {
       dark: {
         text: "#E0DFE4",
         background: "#1D1D1D",
         primary: "#F9826C",
-        secondary: lighten(0.05, "#1D1D1D"),
+        muted: lighten(0.05, "#1D1D1D"),
       },
     },
   },
