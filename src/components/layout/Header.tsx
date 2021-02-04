@@ -31,6 +31,7 @@ const Navigation = () => (
   <Flex sx={{ flexWrap: "nowrap" }}>
     <NavLink to={routes.HOME}>Home</NavLink>
     <NavLink to={routes.PROJECTS}>Projects</NavLink>
+    <NavLink to={routes.CONTACT}>Contact</NavLink>
   </Flex>
 );
 

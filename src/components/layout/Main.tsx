@@ -13,6 +13,7 @@ const Main: React.FC<MainProps> = ({ children }) => (
       justifyContent: "center",
       alignItems: "center",
       py: 10,
+      width: "100%",
       maxWidth: 800,
     }}
   >
