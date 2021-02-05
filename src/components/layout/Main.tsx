@@ -16,7 +16,7 @@ const Main: React.FC<MainProps> = (props) => {
         alignItems: "center",
         px: 3,
         width: "100%",
-        maxWidth: 800,
+        maxWidth: 900,
         textAlign: "center",
         ...sx,
       }}

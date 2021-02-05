@@ -28,7 +28,7 @@ export default ({ name, description, stars, forks, url }: RepoCardProps) => (
     <Card
       p={3}
       sx={{
-        maxWidth: 350,
+        maxWidth: 450,
         height: 170,
         "&:hover": {
           borderColor: "primary",

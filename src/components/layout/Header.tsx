@@ -39,22 +39,23 @@ const Header: React.FC = () => {
   return (
     <Flex
       as="header"
-      p={2}
+      py={2}
       sx={{
         position: "sticky",
         top: 0,
         justifyContent: "center",
         width: "100%",
         backgroundColor: "muted",
-        boxShadow: "rgba(0, 0, 0, 0.1) 0px 2px 6px",
+        boxShadow: "rgba(0, 0, 0, 0.1) 0px 3px 6px",
       }}
     >
       <Flex
+        px={3}
         sx={{
           justifyContent: "space-between",
           alignItems: "center",
           width: "100%",
-          maxWidth: 800,
+          maxWidth: 900,
         }}
       >
         <Navigation />
