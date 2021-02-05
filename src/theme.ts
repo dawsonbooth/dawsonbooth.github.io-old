@@ -18,12 +18,6 @@ export default merge(preset, {
       },
     },
   },
-  cards: {
-    primary: {
-      border: "1px solid",
-      borderColor: "text",
-    },
-  },
   styles: {
     a: {
       textDecoration: "none",

@@ -1,8 +1,8 @@
 import * as React from "react";
 
-import { StarFillIcon, GitForkIcon } from "@primer/octicons-react";
+import { StarIcon, GitForkIcon } from "@primer/octicons-react";
 
-export { StarFillIcon, GitForkIcon };
+export { StarIcon, GitForkIcon };
 
 export const PaletteIcon = () => (
   <svg viewBox="0 0 512 512">

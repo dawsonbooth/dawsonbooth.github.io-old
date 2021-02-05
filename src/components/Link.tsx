@@ -50,4 +50,29 @@ export const IconNavLink: React.FC<NavLinkProps> = (props) => (
   <NavLink p={1} {...props} sx={{ width: 32, height: 32, ...props.sx }} />
 );
 
+export type CardLinkProps = LinkProps;
+
+export const CardLink: React.FC<CardLinkProps> = (props) => {
+  const { href, sx, children, ...linkProps } = props;
+  return (
+    <Link
+      href={href}
+      sx={{
+        border: "1px solid",
+        borderColor: "text",
+        color: "inherit",
+        textDecoration: "none",
+        "&:hover": {
+          textDecoration: "none",
+          borderColor: "primary",
+        },
+        ...sx,
+      }}
+      {...linkProps}
+    >
+      {children}
+    </Link>
+  );
+};
+
 export default Link;
