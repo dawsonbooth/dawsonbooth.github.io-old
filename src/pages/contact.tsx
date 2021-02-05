@@ -8,7 +8,7 @@ import Layout from "../components/layout";
 const Contact = () => {
   const submitForm = (e: FormEvent<HTMLDivElement>) => {
     e.preventDefault();
-    const form: HTMLFormElement = e.target;
+    const form = e.target as HTMLFormElement;
     const data = new FormData(form);
     const xhr = new XMLHttpRequest();
     xhr.open("post", "https://formspree.io/f/xjvpzegr");
