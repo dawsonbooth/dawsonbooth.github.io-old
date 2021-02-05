@@ -35,6 +35,7 @@ const Contact = () => {
       <Box
         as="form"
         onSubmit={submitForm}
+        mb={15}
         sx={{ width: "100%", textAlign: "left" }}
       >
         <Label htmlFor="name">Name</Label>
