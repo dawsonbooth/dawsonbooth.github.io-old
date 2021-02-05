@@ -24,7 +24,7 @@ const Projects = () => {
       <Heading as="h1" my={15}>
         Personal Projects
       </Heading>
-      <Grid gap={3} columns={[1, 1, 2]} sx={{ textAlign: "left" }}>
+      <Grid gap={3} columns={[1, 2]} sx={{ textAlign: "left" }}>
         {repos.map((repo, i) => (
           <RepoCard key={i} {...repo} />
         ))}
