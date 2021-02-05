@@ -29,10 +29,14 @@ const Contact = () => {
 
   return (
     <Layout>
-      <Heading as="h1" sx={{ fontSize: 36, textAlign: "center" }}>
+      <Heading as="h1" my={15}>
         Contact
       </Heading>
-      <Box as="form" onSubmit={submitForm} sx={{ width: "100%", padding: 3 }}>
+      <Box
+        as="form"
+        onSubmit={submitForm}
+        sx={{ width: "100%", textAlign: "left" }}
+      >
         <Label htmlFor="name">Name</Label>
         <Input name="name" type="text" required mb={3} />
 

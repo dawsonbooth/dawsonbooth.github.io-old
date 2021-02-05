@@ -5,7 +5,9 @@ import { Heading, Text } from "theme-ui";
 
 const NotFoundPage = () => (
   <Layout title="404">
-    <Heading>NOT FOUND</Heading>
+    <Heading as="h1" my={15}>
+      NOT FOUND
+    </Heading>
     <Text>You just hit a route that doesn't exist... the sadness.</Text>
   </Layout>
 );

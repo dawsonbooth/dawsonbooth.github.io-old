@@ -1,18 +1,19 @@
 import * as React from "react";
 
 import { Helmet } from "react-helmet";
-import { Flex } from "theme-ui";
+import { BoxProps, Flex } from "theme-ui";
 
 import Header from "./Header";
 import Main from "./Main";
 import Footer from "./Footer";
 
-interface LayoutProps {
+interface LayoutProps extends BoxProps {
   title?: string;
   children: React.ReactNode;
 }
 
-export default function Layout({ title, children }: LayoutProps) {
+export default function Layout(props: LayoutProps) {
+  const { title, ...boxProps } = props;
   const prefix = title ? `${title} | ` : "";
   return (
     <>
@@ -28,7 +29,7 @@ export default function Layout({ title, children }: LayoutProps) {
         }}
       >
         <Header />
-        <Main>{children}</Main>
+        <Main {...boxProps} />
         <Footer />
       </Flex>
     </>
