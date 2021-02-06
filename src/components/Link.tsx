@@ -9,6 +9,8 @@ import {
   NavLinkProps as ThemeUINavLinkProps,
 } from "theme-ui";
 
+import { merge } from "lodash";
+
 type Optional<T, K extends keyof T> = Omit<T, K> & Partial<T>;
 
 export type LinkProps = ThemeUILinkProps &
@@ -57,17 +59,19 @@ export const CardLink: React.FC<CardLinkProps> = (props) => {
   return (
     <Link
       href={href}
-      sx={{
-        border: "1px solid",
-        borderColor: "text",
-        color: "inherit",
-        textDecoration: "none",
-        "&:hover": {
+      sx={merge(
+        {
+          border: "1px solid",
+          borderColor: "text",
+          color: "inherit",
           textDecoration: "none",
-          borderColor: "primary",
+          "&:hover": {
+            textDecoration: "none",
+            borderColor: "primary",
+          },
         },
-        ...sx,
-      }}
+        sx
+      )}
       {...linkProps}
     >
       {children}
