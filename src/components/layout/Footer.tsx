@@ -15,7 +15,7 @@ import {
 } from "../icons";
 
 const Footer: React.FC = () => (
-  <Box as="footer" pb={2} sx={{ width: "100%", backgroundColor: "muted" }}>
+  <Box as="footer" py={2} sx={{ width: "100%", backgroundColor: "muted" }}>
     <Flex
       px={3}
       sx={{ justifyContent: "center", alignItems: "center", flexWrap: "wrap" }}
