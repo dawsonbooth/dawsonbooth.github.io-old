@@ -29,29 +29,31 @@ const Contact = () => {
 
   return (
     <Layout>
-      <Heading as="h1" my={15}>
-        Contact
-      </Heading>
-      <Box
-        as="form"
-        onSubmit={submitForm}
-        mb={15}
-        sx={{ width: "100%", textAlign: "left" }}
-      >
-        <Label htmlFor="name">Name</Label>
-        <Input name="name" type="text" required mb={3} />
+      <Box p={3} sx={{ textAlign: "center" }}>
+        <Heading as="h1" my={15}>
+          Contact
+        </Heading>
+        <Box
+          as="form"
+          onSubmit={submitForm}
+          mb={15}
+          sx={{ width: "100%", textAlign: "left" }}
+        >
+          <Label htmlFor="name">Name</Label>
+          <Input name="name" type="text" required mb={3} />
 
-        <Label htmlFor="_replyto">Email</Label>
-        <Input name="_replyto" type="email" mb={3} />
+          <Label htmlFor="_replyto">Email</Label>
+          <Input name="_replyto" type="email" mb={3} />
 
-        <Label htmlFor="subject">Subject</Label>
-        <Input name="subject" type="text" required mb={3} />
+          <Label htmlFor="subject">Subject</Label>
+          <Input name="subject" type="text" required mb={3} />
 
-        <Label htmlFor="message">Message</Label>
-        <Textarea name="message" required rows={6} mb={3} />
+          <Label htmlFor="message">Message</Label>
+          <Textarea name="message" required rows={6} mb={3} />
 
-        <Button type="submit">Submit</Button>
-        <Input name="_gotcha" type="text" sx={{ display: "none" }} />
+          <Button type="submit">Submit</Button>
+          <Input name="_gotcha" type="text" sx={{ display: "none" }} />
+        </Box>
       </Box>
     </Layout>
   );

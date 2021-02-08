@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { Heading, Grid } from "theme-ui";
+import { Heading, Grid, Flex } from "theme-ui";
 
 import Layout from "../components/layout";
 import Link from "../components/Link";
@@ -21,17 +21,19 @@ const Projects = () => {
 
   return (
     <Layout title="Projects">
-      <Heading as="h1" my={15}>
-        Personal Projects
-      </Heading>
-      <Grid gap={3} columns={[1, 2]} sx={{ textAlign: "left" }}>
-        {repos.map((repo, i) => (
-          <RepoCard key={i} {...repo} />
-        ))}
-      </Grid>
-      <Link href="https://github.com/dawsonbooth" my={15}>
-        Check out all {numRepos} repositories at my GitHub!
-      </Link>
+      <Flex px={3} sx={{ flexDirection: "column", alignItems: "center" }}>
+        <Heading as="h1" my={15}>
+          Personal Projects
+        </Heading>
+        <Grid gap={3} columns={[1, 2]} sx={{ textAlign: "left" }}>
+          {repos.map((repo, i) => (
+            <RepoCard key={i} {...repo} />
+          ))}
+        </Grid>
+        <Link href="https://github.com/dawsonbooth" my={15}>
+          Check out all {numRepos} repositories at my GitHub!
+        </Link>
+      </Flex>
     </Layout>
   );
 };

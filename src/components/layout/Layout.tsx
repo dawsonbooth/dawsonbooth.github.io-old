@@ -24,8 +24,8 @@ export default function Layout(props: LayoutProps) {
         sx={{
           flexDirection: "column",
           justifyContent: "space-between",
-          alignItems: "center",
-          minHeight: "100vh",
+          alignItems: "stretch",
+          height: "100vh",
         }}
       >
         <Header />
