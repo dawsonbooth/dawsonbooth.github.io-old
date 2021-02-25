@@ -26,7 +26,7 @@ export default function Layout(props: LayoutProps) {
           justifyContent: "space-between",
           alignItems: "stretch",
           height: "100vh",
-          pl: "calc(100vw - 100%)"
+          overflow: "overlay",
         }}
       >
         <Header />
