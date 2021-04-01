@@ -2,8 +2,8 @@ import * as React from "react";
 
 import { Heading, Flex, Text, Grid } from "theme-ui";
 
-import { StarIcon, GitForkIcon } from "./icons";
-import { CardLink } from "./Link";
+import { StarIcon, GitForkIcon } from "../icons";
+import { CardLink } from "../Link";
 
 interface RepoCardProps {
   name: string;

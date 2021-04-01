@@ -1,5 +1,14 @@
 import { graphql, useStaticQuery } from "gatsby";
 
+export interface RepoType {
+  name: string;
+  description: string;
+  stars: number;
+  forks: number;
+  watchers: number;
+  url: string;
+}
+
 interface RepoQueryResult {
   githubData: {
     data: {
@@ -23,7 +32,7 @@ interface RepoQueryResult {
   };
 }
 
-export default () => {
+const useRepos: () => RepoType[] = () => {
   const result: RepoQueryResult = useStaticQuery(
     graphql`
       {
@@ -64,3 +73,5 @@ export default () => {
 
   return repos;
 };
+
+export default useRepos;
