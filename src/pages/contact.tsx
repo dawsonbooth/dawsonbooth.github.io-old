@@ -28,7 +28,7 @@ const Contact = () => {
   };
 
   return (
-    <Layout>
+    <Layout title="Contact">
       <Box p={3} sx={{ textAlign: "center" }}>
         <Heading as="h1" my={15}>
           Contact
