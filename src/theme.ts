@@ -25,5 +25,8 @@ export default merge(preset, {
         textDecoration: "underline",
       },
     },
+    h1: {
+      textAlign: "center",
+    },
   },
 });
