@@ -12,7 +12,11 @@ const Main: React.FC<MainProps> = (props) => {
   const { sx, ...boxProps } = props;
   return (
     <Box as="main">
-      <Box sx={merge({ maxWidth: 900, margin: "auto" }, sx)} {...boxProps} />
+      <Box
+        px={3}
+        sx={merge({ maxWidth: 900, margin: "auto" }, sx)}
+        {...boxProps}
+      />
     </Box>
   );
 };
