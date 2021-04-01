@@ -5,16 +5,19 @@ import { Heading, Flex, Text, Grid } from "theme-ui";
 import { StarIcon, GitForkIcon } from "../icons";
 import { CardLink } from "../Link";
 
-interface RepoCardProps {
-  name: string;
-  description: string;
-  stars: number;
-  forks: number;
-  url: string;
-}
+import { RepoType } from "../../hooks/repos";
 
-// TODO: Add watchers
-export default ({ name, description, stars, forks, url }: RepoCardProps) => (
+interface RepoCardProps extends RepoType {}
+
+// TODO: Consider adding watchers
+export default ({
+  name,
+  description,
+  stars,
+  forks,
+  watchers,
+  url,
+}: RepoCardProps) => (
   <CardLink href={url} p={3} sx={{ maxWidth: 450, height: 170 }}>
     <Grid gap={2}>
       <Heading as="h4">{name}</Heading>

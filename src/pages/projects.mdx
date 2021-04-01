@@ -1,7 +1,10 @@
-import { Box, Styled } from "theme-ui";
+import { Box } from "theme-ui";
 
 import Layout from "../components/layout";
-import { MostPopular } from "../components/project/sections";
+import Section, { MostPopular } from "../components/project/Section";
+import Link from "../components/Link";
+
+<!-- TODO: Search for projects by their keywords in GitHub -->
 
 <Layout title="Projects">
 
@@ -9,5 +12,31 @@ import { MostPopular } from "../components/project/sections";
 
 ## Most Popular
 
-<MostPopular numRepos={6}/>
+<MostPopular numRepos={6} />
+
+## Web/Application Development
+
+<Section name="app" />
+
+## Artificial Intelligence
+
+<Section name="ai" />
+
+## Web Scraping
+
+<Section name="scrape" />
+
+## Filesystem
+
+<Section name="fs" />
+
+## Miscellaneous Packages
+
+<Section name="misc" />
+
+<Box sx={{textAlign:"center"}}>
+
+[Check out all my open source projects on my GitHub!](https://github.com/dawsonbooth/)
+
+</Box>
 </Layout>
