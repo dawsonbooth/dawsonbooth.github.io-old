@@ -1,7 +1,7 @@
 import * as React from "react";
 import { FormEvent } from "react";
 
-import { Heading, Box, Button, Label, Input, Textarea } from "theme-ui";
+import { Box, Button, Label, Input, Textarea, Styled } from "theme-ui";
 
 import Layout from "../components/layout";
 
@@ -29,10 +29,8 @@ const Contact = () => {
 
   return (
     <Layout title="Contact">
-      <Box p={3} sx={{ textAlign: "center" }}>
-        <Heading as="h1" my={15}>
-          Contact
-        </Heading>
+      <Box px={3}>
+        <Styled.h1>Contact</Styled.h1>
         <Box
           as="form"
           onSubmit={submitForm}
