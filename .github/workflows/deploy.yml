@@ -10,8 +10,6 @@ on:
 jobs:
   Deploy:
     runs-on: ubuntu-latest
-    env:
-      GATSBY_GITHUB_API_TOKEN: ${{ secrets.GATSBY_GITHUB_API_TOKEN }}
     steps:
       - uses: actions/checkout@v1
       - uses: enriikke/gatsby-gh-pages-action@v2
