@@ -2,10 +2,13 @@ import * as React from "react";
 
 import { Helmet } from "react-helmet";
 import { BoxProps, Flex } from "theme-ui";
+import { keyframes } from "@emotion/react";
 
 import Header from "./Header";
 import Main from "./Main";
 import Footer from "./Footer";
+
+const fadeIn = keyframes({ from: { opacity: 0 }, to: { opacity: 1 } });
 
 interface LayoutProps extends BoxProps {
   title?: string;
@@ -30,7 +33,14 @@ export default function Layout(props: LayoutProps) {
         }}
       >
         <Header />
-        <Main {...boxProps} />
+        <Main
+          {...boxProps}
+          sx={{
+            animationName: fadeIn,
+            animationDuration: ".25s",
+            animationFillMode: "backwards",
+          }}
+        />
         <Footer />
       </Flex>
     </>
