@@ -22,7 +22,7 @@
     "@theme-ui/preset-funk": "^0.3.0",
     "@theme-ui/presets": "^0.3.0",
     "gatsby": "^2.24.58",
-    "gatsby-plugin-mdx": "^1.10.1",
+    "gatsby-plugin-mdx": "^2.14.1",
     "gatsby-plugin-react-helmet": "^3.4.0",
     "gatsby-plugin-theme-ui": "^0.3.0",
     "gatsby-plugin-typescript": "^2.4.19",
